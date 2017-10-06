@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Platform } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-magazine',
+  templateUrl: 'magazine.html'
 })
-export class HomePage {
+export class magazinePage {
 
-  iniTab: string = "dashboard";
   constructor(public navCtrl: NavController) {
 
   }

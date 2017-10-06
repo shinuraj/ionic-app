@@ -1,0 +1,26 @@
+.loginBox h3 {
+    margin-top: 0;
+}
+
+.loginBox .loginBoxForm {
+    background: #fff;
+    margin: 11px;
+    border-radius: 2px;
+    width: calc(100% - 24px);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    padding-bottom: 8px;
+}
+
+.loginBox .loginBoxForm button {
+    width: calc(100% - 24px);
+    margin-left: 12px;
+    margin-top: 16px;
+}
+
+.loginBox .loginBoxForm ion-item {
+    padding-right: 16px;
+}
+
+.list-ios>.item-block:first-child {
+    border: none;
+}
