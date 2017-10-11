@@ -1,3 +1,40 @@
-page-home {
+.panel-default>.panel-heading {
+    /* color: #333; */
+    background-color: white !important;
+    border-color: #ddd;
+}
 
+.toolbar {
+    min-height: 36px;
+}
+
+.segment-button {
+    background-color: rgba(32, 204, 186, 0.5) !important;
+    color: #fff !important;
+}
+
+.segment-button.segment-activated {
+    background-color: #4884ca !important;
+}
+
+.panel-body {
+    padding: 15px;
+    height: 70px !important;
+}
+
+h6 {
+    margin-top: 0;
+}
+
+.card-title {
+    color: #000;
+}
+
+chart {
+    display: block;
+    height: 200px;
+}
+
+chart.piechart {
+    height: 350px;
 }

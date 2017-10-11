@@ -1,0 +1,16 @@
+//selected color
+.tab-button {
+    background: #569ef3;
+    color: #fff !important;
+}
+
+.tab-button[aria-selected=true] {
+    color: #fff !important;
+    background: #4884ca;
+}
+
+.tab-button .tab-button-icon {
+    color: #fff !important;
+    font-size: 22px;
+    margin-top: 7px;
+}

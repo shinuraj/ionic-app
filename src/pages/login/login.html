@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content class="loginBox">
-    <h3 padding>Welcome to LPL Finance!</h3>
     <ion-list class="loginBoxForm">
         <ion-item>
             <ion-input type="text" placeholder="Username"></ion-input>
@@ -13,35 +12,17 @@
         <ion-item>
             <ion-input type="password" placeholder="Password"></ion-input>
         </ion-item>
-        <button ion-button color="primary" block [navPush]="tab0Root">Sign In</button>
+        <button ion-button block [navPush]="tab0Root">Sign In</button>
     </ion-list>
-    <ion-card class="adv-map">
-        <div style="position: relative">
-            <img src="assets/images/card-map.png">
-            <ion-fab right top>
-                <button ion-fab color="secondary">
-                  <ion-icon name="pin"></ion-icon>
-                </button>
-            </ion-fab>
-        </div>
+    <ion-card>
         <ion-item>
-            <ion-icon color="subtle" large item-start name='information-circle'></ion-icon>
-            <h2>Museum of Information</h2>
-            <p>44 Rue de Info, 75010 Paris, France</p>
+            <ion-icon name="pin" item-start large></ion-icon>
+            <h2>Locate Your Advisor</h2>
         </ion-item>
-        <ion-item>
-            <ion-icon color="subtle" large item-start name='leaf'></ion-icon>
-            <h2>General Pharmacy</h2>
-            <p>1 Avenue Faux, 75010 Paris, France</p>
-        </ion-item>
-        <ion-item actions>
-            <span ion-text item-start color="secondary" class="item-bold">26 min</span>
-            <span ion-text item-start color="subtle">(8.1 mi)</span>
-            <button ion-button color="secondary" clear item-end icon-start>
-                <ion-icon name='navigate'></ion-icon>
-                Start
-              </button>
-        </ion-item>
-
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+            <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"></agm-marker>
+            <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true" [editable]="true">
+            </agm-circle>
+        </agm-map>
     </ion-card>
 </ion-content>
