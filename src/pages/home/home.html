@@ -1,12 +1,17 @@
 <ion-header>
     <ion-navbar no-border-bottom>
+        <ion-buttons start>
+            <button ion-button icon-only>
+                <ion-icon name="contact"></ion-icon>
+            </button>
+        </ion-buttons>
         <ion-title>
             Home
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only color="royal" [navPush]="loginRoot">
-                  <ion-icon name="log-out"></ion-icon>
-                </button>
+            <button ion-button icon-only [navPush]="loginRoot">
+                <ion-icon name="log-out"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
 
