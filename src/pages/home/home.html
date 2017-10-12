@@ -14,23 +14,22 @@
             </button>
         </ion-buttons>
     </ion-navbar>
-
-    <ion-toolbar no-border-top>
-        <ion-segment [(ngModel)]="iniTab">
-            <ion-segment-button value="dashboard">
-                Dashboard
-            </ion-segment-button>
-            <ion-segment-button value="transactions">
-                Transactions
-            </ion-segment-button>
-            <ion-segment-button value="planning">
-                Planning
-            </ion-segment-button>
-        </ion-segment>
-    </ion-toolbar>
+    <ion-segment [(ngModel)]="iniTab">
+        <ion-segment-button value="dashboard">
+            Dashboard
+        </ion-segment-button>
+        <ion-segment-button value="transactions">
+            Transactions
+        </ion-segment-button>
+        <ion-segment-button value="planning">
+            Planning
+        </ion-segment-button>
+    </ion-segment>
 </ion-header>
 
 <ion-content>
+
+
     <div [ngSwitch]="iniTab">
         <div *ngSwitchCase="'dashboard'">
 

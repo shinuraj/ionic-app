@@ -1,1 +1,48 @@
-page-news {}
+.news-card-info {
+    display: flex;
+}
+
+.news-card-info .news-image {
+    width: 40%;
+    height: 50px;
+    overflow: hidden;
+    margin: 8px 8px 0 8px;
+}
+
+.news-card-info .news-image img {
+    width: 100%;
+}
+
+.news-card-info .news-text {
+    width: 60%;
+    margin: 6px 8px 0 0;
+}
+
+.news-card-info .news-text p {
+    color: #000;
+    font-weight: 500;
+}
+
+.card .item {
+    font-size: 1.2rem;
+    padding-left: 8px;
+    min-height: auto;
+}
+
+.card .item .green {
+    color: rgb(0, 124, 0);
+}
+
+.card .item .item-inner {
+    min-height: auto;
+    align-self: auto;
+}
+
+.card .item .item-inner .input-wrapper {
+    align-self: auto;
+}
+
+.card .item .item-inner .item-button {
+    margin: 0.2rem 0.2rem;
+    height: 20px;
+}
