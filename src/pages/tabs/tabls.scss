@@ -1,14 +1,14 @@
 //selected color
 .tab-button {
-    background: #348ad6;
+    background: map-get($colors, primary);
 }
 
 .tab-button[aria-selected=true] {
-    background: #2365a0;
+    background: map-get($colors, primary-dark);
 }
 
 .tab-button .tab-button-icon {
-    color: #fff !important;
+    color: map-get($colors, fulllight) !important;
     font-size: 22px;
     margin-top: 7px;
 }

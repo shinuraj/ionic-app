@@ -3,8 +3,7 @@
 }
 
 .loginBox {
-    background: #348ad6;
-    background: linear-gradient(to bottom, #378cd6, #48b0c9);
+    background: linear-gradient(to bottom, #348ad6 20%, #48b0c9 100%);
 }
 
 .loginBox h3 {
@@ -47,6 +46,11 @@
     border: none;
 }
 
+.loginBox .card {
+    width: calc(100% - 48px);
+    margin-left: 24px;
+}
+
 agm-map {
-    height: 270px;
+    height: 280px;
 }
