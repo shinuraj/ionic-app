@@ -7,12 +7,12 @@
 <ion-content class="loginBox">
     <ion-list class="loginBoxForm">
         <ion-item>
-            <ion-input type="text" placeholder="Username"></ion-input>
+            <ion-input type="text" [(ngModel)]="email" placeholder="Username" #username></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input type="password" placeholder="Password"></ion-input>
+            <ion-input type="password" name="password" [(ngModel)]="password" placeholder="Password" #password></ion-input>
         </ion-item>
-        <button ion-button block [navPush]="tab0Root">Sign In</button>
+        <button ion-button block [navPush]="tab0Root" (click)="login()">Sign In</button>
     </ion-list>
     <ion-card>
         <ion-item>

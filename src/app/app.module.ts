@@ -10,11 +10,24 @@ import { NewsPage } from '../pages/news/news';
 import { CollaboratePage } from '../pages/collaborate/collaborate';
 import { magazinePage } from '../pages/magazine/magazine';
 import { ChartModule } from 'angular2-highcharts';
+import { AngularFireModule } from 'angularfire2';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from '@agm/core';
 declare var require: any;
+
+
+// Initialize Firebase
+const firebaseAuth = {
+  apiKey: "AIzaSyCcqmeHkYKUjDA3OQcoMgC2CCqUQ6zig08",
+  authDomain: "ionic-app-183202.firebaseapp.com",
+  databaseURL: "https://ionic-app-183202.firebaseio.com",
+  projectId: "ionic-app-183202",
+  storageBucket: "ionic-app-183202.appspot.com",
+  messagingSenderId: "1034954577744"
+};
+
 
 @NgModule({
   declarations: [
@@ -32,7 +45,8 @@ declare var require: any;
       apiKey: 'AIzaSyC75mpaf-PgaDKUqyZwkheoOJJrKjdEhJI'
     }),
     ChartModule.forRoot(require('highcharts')),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
