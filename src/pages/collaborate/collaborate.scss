@@ -173,10 +173,11 @@
  .char-avatar-blue {
      height: 50px;
      width: 50px;
-     background: #427df4;
+     background: map-get($colors, primary);
      font-size: 30px;
      font-weight: bold;
-     padding-left: 15px;
+     text-align: center;
+     border-radius: 50%;
      padding-top: 6px;
  }
  
@@ -186,7 +187,8 @@
      background: #ccc;
      font-size: 30px;
      font-weight: bold;
-     padding-left: 15px;
+     text-align: center;
+     border-radius: 50%;
      padding-top: 6px;
  }
  
