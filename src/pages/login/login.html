@@ -1,19 +1,85 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>CTC POC App</ion-title>
+        <ion-title>Finance Application</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content class="loginBox">
     <ion-list class="loginBoxForm">
         <ion-item>
-            <ion-input type="text" [(ngModel)]="email" placeholder="Username" #username></ion-input>
+            <ion-input type="text" [(ngModel)]="email" placeholder="Username"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input type="password" name="password" [(ngModel)]="password" placeholder="Password" #password></ion-input>
+            <ion-input type="password" name="password" [(ngModel)]="password" placeholder="Password"></ion-input>
         </ion-item>
-        <button ion-button block [navPush]="tab0Root" (click)="login()">Sign In</button>
+        <button ion-button block [navPush]="tab0Root">Sign In</button>
     </ion-list>
+
+    <ion-grid class="login-news">
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-icon name="pie"></ion-icon>
+                    <div class="card-title">24 Debitis</div>
+                </ion-card>
+            </ion-col>
+            <ion-col col-6>
+                <ion-card>
+                    <ion-icon name="paper"></ion-icon>
+                    <div class="card-title">434 Omnesque</div>
+                </ion-card>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <ion-card class="note-news">
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="../../assets/images/marty-avatar.png">
+            </ion-avatar>
+            <h2>Cmmodo Debi</h2>
+            <p>November 5, 1955</p>
+        </ion-item>
+
+        <ion-card-content>
+            <p>Lorem ipsum dolor sit amet, vix commodo debitis no. Vide omnium omnesque eam no...</p>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>12 Likes</div>
+                  </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>4 Comments</div>
+                  </button>
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note>
+                    11h ago
+                </ion-note>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+    <ion-card class="info-card">
+        <ion-item>
+            <ion-icon name="podium" item-left large></ion-icon>
+            <h2>Dave dollen followed 8 people</h2>
+            <p>14 S. Hop Avenue, Madison, WI 53703</p>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="quote" item-left large></ion-icon>
+            <h2>Ommodo debitis noide omnium</h2>
+            <p>14 S. Hop Avenue, Madison, WI 53703</p>
+        </ion-item>
+    </ion-card>
+
     <ion-card>
         <ion-item>
             <ion-icon name="pin" item-start large></ion-icon>
@@ -25,4 +91,5 @@
             </agm-circle>
         </agm-map>
     </ion-card>
+
 </ion-content>

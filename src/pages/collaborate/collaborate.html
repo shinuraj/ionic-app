@@ -1,8 +1,11 @@
 <ion-header>
     <ion-navbar>
         <ion-buttons start>
-            <button ion-button icon-only>
-                <ion-icon name="contact"></ion-icon>
+            <button ion-button icon-only *ngIf="!showdetails">
+                <ion-icon name="contact" ></ion-icon>              
+            </button>
+            <button ion-button icon-only (click)="showdetails=!showdetails" *ngIf="showdetails">               
+                    <ion-icon name="backspace" ></ion-icon>              
             </button>
         </ion-buttons>
         <ion-title>
@@ -17,19 +20,51 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-list-header>Follow us</ion-list-header>
-        <ion-item>
-            <ion-icon name="ionic" item-start></ion-icon>
-            Lorem ipsum dolor sit amet, vix commodo debitis no.
-        </ion-item>
-        <ion-item>
-            <ion-icon name="ionic" item-start></ion-icon>
-            Lorem ipsum dolor sit amet, vix commodo debitis no.
-        </ion-item>
-        <ion-item>
-            <ion-icon name="ionic" item-start></ion-icon>
-            Lorem ipsum dolor sit amet, vix commodo debitis no.
-        </ion-item>
-    </ion-list>
+    <div *ngIf="!showdetails" class="animated bounceInLeft">
+        <ion-list>
+            <ion-item (click)="showdetails=!showdetails">
+                <div style="float:left;padding-right: 10px;">
+                    <div class="char-avatar-blue">A</div>
+                </div>
+                <div>
+                    <h2 class="animate-in-primary">Need Account Details</h2>
+                    <p class="animate-in-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit mi, varius in blandit sit amet, tempus non risus. Maecenas risus urna, auctor ac laoreet sit amet, placerat non dolor.</p>
+                </div>
+            </ion-item>
+            <ion-item (click)="showdetails=!showdetails">
+                <div style="float:left;padding-right: 10px;">
+                    <div class="char-avatar-gray">B</div>
+                </div>
+                <div>
+                    <h2 class="animate-in-primary">Need stock price </h2>
+                    <p class="animate-in-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit mi, varius in blandit sit amet, tempus non risus. Maecenas risus urna, auctor ac laoreet sit amet, placerat non dolor.</p>
+                </div>
+            </ion-item>
+            <ion-item (click)="showdetails=!showdetails">
+                <div style="float:left;padding-right: 10px;">
+                    <div class="char-avatar-blue">A</div>
+                </div>
+                <div>
+                    <h2 class="animate-in-primary">Need Account Details</h2>
+                    <p class="animate-in-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit mi, varius in blandit sit amet, tempus non risus. Maecenas risus urna, auctor ac laoreet sit amet, placerat non dolor.</p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+    <div *ngIf="showdetails">
+        <ion-list no-lines>
+            <ion-item *ngFor="let msg of messages" class="animate-in-primary">
+                <div class="chatBubble {{msg.position}}">
+                    <ion-icon name="contact" class="userIcon"></ion-icon>
+                    <div class="chat-bubble {{msg.position}}">
+                        <div class="message">{{msg.content}}</div>
+                        <div class="message-detail animate-in-secondary">
+                            <span style="font-weight:bold;">{{msg.senderName}} </span>,
+                            <span>{{msg.time}}</span>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
 </ion-content>

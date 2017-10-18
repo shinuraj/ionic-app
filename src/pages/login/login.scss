@@ -47,10 +47,53 @@
 }
 
 .loginBox .card {
-    width: calc(100% - 48px);
-    margin-left: 24px;
+    width: calc(100% - 24px);
+    margin-left: 12px;
+}
+
+.login-news {
+    padding: 0 0 0 12px;
+}
+
+.login-news .col {
+    padding: 0;
+}
+
+.login-news .card {
+    background: linear-gradient(to bottom right, #fff, #b5bfc7);
+    width: calc(100% - 12px);
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.login-news .card .icon {
+    font-size: 55px;
+    color: #2365a0;
+}
+
+.login-news .card .card-title {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.note-news .col {
+    padding-top: 0;
+}
+
+.note-news .card-content {
+    padding-bottom: 0;
+}
+
+.note-news .col .note {
+    line-height: 35px;
+}
+
+.info-card h2 {
+    font-size: 15px;
 }
 
 agm-map {
-    height: 280px;
+    height: 240px;
 }

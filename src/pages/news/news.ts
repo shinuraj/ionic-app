@@ -6,7 +6,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'news.html'
 })
 export class NewsPage {
-
+  iniNewsTab : string = "top";
   constructor(public navCtrl: NavController) {
 
   }

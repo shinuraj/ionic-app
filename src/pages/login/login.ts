@@ -10,23 +10,8 @@ import { TabsPage } from './../tabs/tabs';
 })
 export class LoginPage {
 
-	constructor(public _angularFireAuth:AngularFireAuth){}
+	
 	tab0Root:any = TabsPage;
-
-	@ViewChild('username') username;
-	@ViewChild('password') password;
-
-	login() {
-		this._angularFireAuth.auth.createUserWithEmailAndPassword(
-			this.username.value,
-			this.password.value
-		).then(data=>{
-			console.log(data);
-		})		
-	}
-
-
-
 
 
 

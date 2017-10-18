@@ -14,7 +14,7 @@
                     </button>
         </ion-buttons>
     </ion-navbar>
-    <ion-segment [(ngModel)]="apps">
+    <ion-segment [(ngModel)]="iniNewsTab">
         <ion-segment-button value="top">
             Top Stories
         </ion-segment-button>
@@ -26,86 +26,243 @@
         </ion-segment-button>
     </ion-segment>
 </ion-header>
-
 <ion-content>
-    <ion-card>
-        <section class="news-card-info">
-            <div class="news-image">
-                <img src="../../assets/images/news-01.jpg">
-            </div>
-            <div class="news-text">
-                <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
-            </div>
-        </section>
-        <ion-item>
-            <span item-left><span class="green">CNBC News</span> - 1h ago</span>
-            <button ion-button clear item-end>
+    <div [ngSwitch]="iniNewsTab">
+        <div *ngSwitchCase="'top'">
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-01.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
                               <ion-icon name="bookmark"></ion-icon>                  
                         </button>
-            <button ion-button clear item-end>
+                    <button ion-button clear item-end>
                                 <ion-icon name="share-alt"></ion-icon>                        
                         </button>
-        </ion-item>
-    </ion-card>
-    <ion-card>
-        <section class="news-card-info">
-            <div class="news-image">
-                <img src="../../assets/images/news-06.jpg">
-            </div>
-            <div class="news-text">
-                <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
-            </div>
-        </section>
-        <ion-item>
-            <span item-left><span class="green">CNBC News</span> - 1h ago</span>
-            <button ion-button clear item-end>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-06.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
                   <ion-icon name="bookmark"></ion-icon>                  
             </button>
-            <button ion-button clear item-end>
+                    <button ion-button clear item-end>
                     <ion-icon name="share-alt"></ion-icon>                        
             </button>
-        </ion-item>
-    </ion-card>
-
-    <ion-card>
-        <section class="news-card-info">
-            <div class="news-image">
-                <img src="../../assets/images/news-02.jpg">
-            </div>
-            <div class="news-text">
-                <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
-            </div>
-        </section>
-        <ion-item>
-            <span item-left><span class="green">CNBC News</span> - 1h ago</span>
-            <button ion-button clear item-end>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-02.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
                       <ion-icon name="bookmark"></ion-icon>                  
                 </button>
-            <button ion-button clear item-end>
+                    <button ion-button clear item-end>
                         <ion-icon name="share-alt"></ion-icon>                        
                 </button>
-        </ion-item>
-    </ion-card>
-    <ion-card>
-        <section class="news-card-info">
-            <div class="news-image">
-                <img src="../../assets/images/news-07.jpg">
-            </div>
-            <div class="news-text">
-                <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
-            </div>
-        </section>
-        <ion-item>
-            <span item-left><span class="green">CNBC News</span> - 1h ago</span>
-            <button ion-button clear item-end>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-07.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
                           <ion-icon name="bookmark"></ion-icon>                  
                     </button>
-            <button ion-button clear item-end>
+                    <button ion-button clear item-end>
                             <ion-icon name="share-alt"></ion-icon>                        
                     </button>
-        </ion-item>
-    </ion-card>
+                </ion-item>
+            </ion-card>
+        </div>
+        <div *ngSwitchCase="'business'">
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-01.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                                      <ion-icon name="bookmark"></ion-icon>                  
+                                </button>
+                    <button ion-button clear item-end>
+                                        <ion-icon name="share-alt"></ion-icon>                        
+                                </button>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-06.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                          <ion-icon name="bookmark"></ion-icon>                  
+                    </button>
+                    <button ion-button clear item-end>
+                            <ion-icon name="share-alt"></ion-icon>                        
+                    </button>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-02.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                              <ion-icon name="bookmark"></ion-icon>                  
+                        </button>
+                    <button ion-button clear item-end>
+                                <ion-icon name="share-alt"></ion-icon>                        
+                        </button>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-07.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                                  <ion-icon name="bookmark"></ion-icon>                  
+                            </button>
+                    <button ion-button clear item-end>
+                                    <ion-icon name="share-alt"></ion-icon>                        
+                            </button>
+                </ion-item>
+            </ion-card>
 
+        </div>
+        <div *ngSwitchCase="'stocks'">
 
-
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-01.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                                      <ion-icon name="bookmark"></ion-icon>                  
+                                </button>
+                    <button ion-button clear item-end>
+                                        <ion-icon name="share-alt"></ion-icon>                        
+                                </button>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-06.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                          <ion-icon name="bookmark"></ion-icon>                  
+                    </button>
+                    <button ion-button clear item-end>
+                            <ion-icon name="share-alt"></ion-icon>                        
+                    </button>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-02.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                              <ion-icon name="bookmark"></ion-icon>                  
+                        </button>
+                    <button ion-button clear item-end>
+                                <ion-icon name="share-alt"></ion-icon>                        
+                        </button>
+                </ion-item>
+            </ion-card>
+            <ion-card class="animated bounceInLeft">
+                <section class="news-card-info">
+                    <div class="news-image">
+                        <img src="../../assets/images/news-07.jpg">
+                    </div>
+                    <div class="news-text">
+                        <p>Ommodo debitis no. Vide omnium omnesque eam no, in civibus</p>
+                    </div>
+                </section>
+                <ion-item>
+                    <span item-left><span class="green">CNBC News</span> - 1h ago</span>
+                    <button ion-button clear item-end>
+                                  <ion-icon name="bookmark"></ion-icon>                  
+                            </button>
+                    <button ion-button clear item-end>
+                                    <ion-icon name="share-alt"></ion-icon>                        
+                            </button>
+                </ion-item>
+            </ion-card>
+        </div>
+    </div>
 </ion-content>

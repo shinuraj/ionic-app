@@ -9,7 +9,7 @@
             Home
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only [navPush]="loginRoot">
+            <button ion-button icon-only (click)="logout();">
                 <ion-icon name="log-out"></ion-icon>
             </button>
         </ion-buttons>
@@ -28,8 +28,6 @@
 </ion-header>
 
 <ion-content>
-
-
     <div [ngSwitch]="iniTab">
         <div *ngSwitchCase="'dashboard'">
 
@@ -81,8 +79,6 @@
             <p>Lorem ipsum dolor sit amet, vix commodo debitis no. Vide omnium omnesque eam no, in civibus accusata urbanitas duo, ut ridens voluptua mel. Sea no cibo principes, nam sumo autem velit ei, nam ex vidit liber dissentias.Lorem ipsum dolor sit<br><br>                Lorem ipsum dolor sit amet, vix commodo debitis no. Vide omnium omnesque eam no, in civibus accusata urbanitas duo, ut ridens voluptua mel. Sea no cibo principes, nam sumo autem velit ei, nam ex vidit liber dissentias. amet, vix commodo
                 debitis no. Vide omnium omnesque eam no, in civibus accusata urbanitas duo, ut ridens voluptua mel. Sea no cibo principes, nam sumo autem velit ei, nam ex vidit liber dissentias.</p>
         </div>
-
-
 
     </div>
 </ion-content>

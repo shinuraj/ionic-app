@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {Platform} from 'ionic-angular';
 import {LoginPage} from './../login/login';
+import { App } from 'ionic-angular';
 
 @Component({selector: 'page-home', templateUrl: 'home.html'})
 export class HomePage {
@@ -10,7 +11,7 @@ export class HomePage {
   loginRoot : any = LoginPage;
   options : Object;
   pieOptions : Object;
-  constructor(public navCtrl : NavController) {
+  constructor(public navCtrl : NavController, public appCtrl: App) {
     this.pieOptions = {
       chart: {
         type: 'pie'
@@ -296,4 +297,13 @@ export class HomePage {
 
     }
   };
-}
+
+  logout() {
+    this.appCtrl.getRootNav().setRoot(LoginPage, {}, {
+      animate:true,
+      animation:'transition',
+      duration:500,
+      direction:'back'})
+    }
+  }
+   
